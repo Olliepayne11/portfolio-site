@@ -1,0 +1,93 @@
+#contact-main {
+    position: relative;
+    top: 16vh;
+    height: 71vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85%
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 60%;
+    max-width: 700px;
+    min-width: 300px;
+    height: 100%;
+    padding: 25px 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.302);
+}
+
+form h2 {
+    align-self: center;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    color: #3d445a;
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3d445a;
+}
+
+form .input-box {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.input-box .field {
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    color: #3d445a;
+    border: 2px solid #EDE8F5;
+    outline: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.input-box .field-message {
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    color: #3d445a;
+    border: 2px solid #EDE8F5;
+    outline: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+form button {
+    align-self: center;
+    width: 100%;
+    height: 55px;
+    background: #3d445a;
+    color: #EDE8F5;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 25px;
+    transition: .5s;
+}

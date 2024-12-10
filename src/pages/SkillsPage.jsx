@@ -14,6 +14,7 @@ import sql from '../assets/sql-logo.png'
 import react from '../assets/react-logo.png'
 import jquery from '../assets/jquery-logo.webp'
 import bootstrap from '../assets/bootstrap-logo.png'
+import openNav from '../extra/opennav'
 
 import '../css/SkillsPage.css'
 
@@ -33,6 +34,9 @@ export default function SkillsPage() {
                     <li class="list-item"><Link to="/projects">Projects</Link></li>
                     <li class="list-item"><Link to="/contact">Contact</Link></li>
                   </ul>
+                </div>
+                <div id="side-menu">
+                    <i id="menu-icon" class="fa-solid fa-bars" onClick={openNav}></i>
                 </div>
             </header>
             <main id="skillspage-main">

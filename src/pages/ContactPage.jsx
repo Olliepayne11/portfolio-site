@@ -3,10 +3,43 @@ import github from '../assets/GitHub.png'
 import linkedin from '../assets/linkedinlogo.png'
 import facebook from '../assets/facebooklogo.svg'
 import instagram from '../assets/instagram.webp'
+import openNav from '../extra/opennav'
+
+import React from 'react'
+import Swal from "sweetalert2"
 
 import '../css/ContactPage.css'
 
 export default function ContactPage() {
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "56c8651f-9ac3-4383-aea2-32c6733420f1");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      Swal.fire({
+        title: "Success!",
+        text: "Message has been sent",
+        icon: "success",
+      });
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
     return (
         <>
             <header>
@@ -23,9 +56,29 @@ export default function ContactPage() {
                     <li class="list-item"><Link to="/contact">Contact</Link></li>
                   </ul>
                 </div>
+                <div id="side-menu">
+                  <i id="menu-icon" class="fa-solid fa-bars" onClick={openNav}></i>
+                </div>
             </header>
-            <main>
-                <h1>Contact Form</h1>
+            <main id="contact-main">
+                <section className="contact">
+                    <form onSubmit={onSubmit}>
+                        <h2>Contact Form</h2>
+                        <div className="input-box">
+                            <label>Full Name</label>
+                            <input type="text" className="field" placeholder="Enter your name" name="name" required></input>
+                        </div>
+                        <div className="input-box">
+                            <label>Email Address</label>
+                            <input type="email" className="field" placeholder="Enter your email" name="email" required></input>
+                        </div>
+                        <div className="input-box">
+                            <label>Your Message</label>
+                            <textarea name="message" className="field-message" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
             </main>
             <footer>
                 <div class="social-links">

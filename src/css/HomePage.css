@@ -8,6 +8,7 @@ body {
     margin: 0px 0px;
     width: 100%;
     height: 100vh;
+    font-family: 'DM Serif Text';
 }
 
 /*Header Section Below*/
@@ -17,7 +18,6 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
-    margin-top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -26,13 +26,14 @@ header {
 
 .logo {
     height: 100%;
-    width: 29%;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'DM Serif Text';
-    color: #EDE8F5;
 }
 
 header h1 {
@@ -43,13 +44,17 @@ header h1 a {
     font-size: 50px;
 }
 
+header h5 {
+    text-align: center;
+}
+
 header h1 a, header h5 a {
     color: #EDE8F5;
 }
 
 header h1 a:hover, header h5 a:hover {
     text-decoration: none;
-    color: #7091E6;
+    color: #EDE8F5;
 }
 
 .list-container {
@@ -88,6 +93,10 @@ header ul li a:hover {
     color: #7091E6;
 }
 
+#side-menu {
+    display: none;
+}
+
 @media only screen and (max-width: 904px) {
     header {
         height: 19vh;
@@ -101,6 +110,7 @@ header ul li a:hover {
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding: 5px;
     }
 
     .list-container {
@@ -117,16 +127,28 @@ header ul li a:hover {
 @media only screen and (max-width: 425px) {
     header {
         height: 8vh;
+        width: 100%;
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
     }
 
     .logo {
+        position: absolute;
         width: 100%;
-        height: 100%;
+        height: auto;
+        padding-left: 0px;
+        justify-content: flex-start;
     }
 
     header h1 a {
         font-size: 30px;
+    }
+
+    header h1 {
+        width: 200px;
     }
 
     header h5 {
@@ -137,16 +159,61 @@ header ul li a:hover {
         font-size: 10px;
     }
 
-    header ul {
+    .list-container {
         display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 7vh;
+        width: 100%;
+        height: 30px;
+        background-color: #3d445a;
+    }
+
+    .list-container ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 6px;
+        margin-left: -10px;
+        margin-right: 0px;
+    }
+
+    .list-container ul li {
+        font-size: 14px;
+    }
+
+    #side-menu {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #menu-icon {
+        border: 3px solid #EDE8F5;
+        border-radius: 50%;
+        padding: 10px;
+        color: #EDE8F5;
+    }
+
+    #menu-icon:active {
+        rotate: 90deg;
+        color: #7091E6;
     }
 }
 
 /*Main Section Below*/
 #homepage-main {
     position: relative;
-    top: 14vh;
-    height: 70vh;
+    top: 16vh;
+    height: 71vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -159,13 +226,13 @@ header ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 120%;
+    height: 100%;
     width: 100%;
 }
 
 .about-me {
-    height: 100%;
-    width: 50%;
+    height: 80%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -173,16 +240,16 @@ header ul li a:hover {
 }
 
 main #ollie-img {
-    width: 250px;
+    width: 300px;
     height: auto;
     border-radius: 50%;
-    border: 5px solid #3D52A0;
+    border: 5px solid #3d445a;
 }
 
 main .about-me h2 {
     font-family: 'DM Serif Text';
-    font-size: 40px;
-    color: #3D52A0;
+    font-size: 45px;
+    color: #3d445a;
     text-align: center;
     text-decoration: underline;
     margin-bottom: 10px;
@@ -190,8 +257,8 @@ main .about-me h2 {
 
 #homepage-main p {
     font-family: 'DM Serif Text';
-    font-size: 20px;
-    color: #3D52A0;
+    font-size: 21px;
+    color: #3d445a;
     text-align: center;
 }
 
@@ -199,6 +266,7 @@ main .about-me h2 {
 
 @media only screen and (max-width: 904px) {
     #homepage-main {
+        top: 20vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -207,7 +275,7 @@ main .about-me h2 {
 
     .photo {
         width: 50%;
-        height: 100%;
+        height: 60%;
         align-items: flex-end;
     }
 
@@ -220,11 +288,22 @@ main .about-me h2 {
         width: 80%;
         justify-content: flex-start;
     }
+
+    #homepage-main h2 {
+        font-family: 'DM Serif Text';
+        font-size: 30px;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    #homepage-main p{
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 425px) {
     #homepage-main {
-        margin-top: -30px;
+        top: 10vh;
         height: 80vh;
         flex-direction: column;
         justify-content: center;
@@ -233,7 +312,6 @@ main .about-me h2 {
 
     .photo {
         width: 100%;
-        height: 50%;
         align-items: center;
         justify-content: center;
     }
@@ -244,21 +322,22 @@ main .about-me h2 {
     }
 
     .about-me {
-        width: 100%;
+        width: 90%;
         height: 100%;
         justify-content: flex-start;
     }
 
-    main .about-me h2 {
+    #homepage-main h2 {
         font-family: 'DM Serif Text';
         font-size: 30px;
-        color: #3D52A0;
         text-align: center;
         text-decoration: underline;
-        margin-bottom: 10px;
+    }
+
+    #homepage-main p{
+        font-size: 17px;
     }
 }
-
 
 /*Footer Section Below*/
 footer {
@@ -285,7 +364,7 @@ footer {
 
 .social-links h3 {
     text-decoration: underline;
-    color: #3D52A0;
+    color: #3d445a;
 }
 
 footer ul li {
@@ -321,7 +400,7 @@ footer img {
     }
 
     footer img {
-        width: 20px;
+        width: 22px;
         height: auto;
         margin-top: 10px;
     }

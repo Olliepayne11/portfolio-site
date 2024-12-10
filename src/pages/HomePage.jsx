@@ -4,6 +4,7 @@ import linkedin from '../assets/linkedinlogo.png'
 import facebook from '../assets/facebooklogo.svg'
 import instagram from '../assets/instagram.webp'
 import ollie from '../assets/Ollie2.jpeg'
+import openNav from '../extra/opennav'
 
 import '../css/HomePage.css'
 
@@ -25,15 +26,18 @@ export default function HomePage() {
             <li class="list-item"><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
+        <div id="side-menu">
+          <i id="menu-icon" class="fa-solid fa-bars" onClick={openNav}></i>
+        </div>
       </header>
       <main id="homepage-main">
             <div class="photo">
-              <img src={ollie} alt="Oliver Payne" id="ollie-img" />
+              <img src={ollie} alt="Oliver Payne" id="ollie-img" class="shadow-lg"/>
             </div>
             <div class="about-me">
-              <h2>About Me</h2><br/>
-              <p>Hi! I am an aspiring full stack web developer from London, currently studying with IT Career Switch to help fulfil my goals of working full-time within the industry.</p>
-              <p>I thoroughly enjoy both the creative and problem-solving aspects to coding, applying my skills and knowledge to a variety of applications. Click through to the projects page of this website to see the projects I have worked on!</p>
+              <h2>Profile</h2><br/>
+              <p>Hi! I am a full stack web developer from London, currently studying with IT Career Switch to help fulfil my goals of working full-time within the industry.</p>
+              <p>I thoroughly enjoy both the creative and problem-solving aspects to coding, applying my skills and knowledge to a variety of applications. Click through to the projects section to see the projects I have worked on!</p>
             </div>
         </main>
         <footer>

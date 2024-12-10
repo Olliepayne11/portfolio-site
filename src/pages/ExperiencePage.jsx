@@ -3,6 +3,7 @@ import github from '../assets/GitHub.png'
 import linkedin from '../assets/linkedinlogo.png'
 import facebook from '../assets/facebooklogo.svg'
 import instagram from '../assets/instagram.webp'
+import openNav from '../extra/opennav'
 
 import '../css/ExperiencePage.css'
 
@@ -22,6 +23,9 @@ export default function ExperiencePage() {
                     <li class="list-item"><Link to="/projects">Projects</Link></li>
                     <li class="list-item"><Link to="/contact">Contact</Link></li>
                   </ul>
+                </div>
+                <div id="side-menu">
+                    <i id="menu-icon" class="fa-solid fa-bars" onClick={openNav}></i>
                 </div>
             </header>
             <main>

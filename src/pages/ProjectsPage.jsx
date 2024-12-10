@@ -3,6 +3,8 @@ import github from '../assets/GitHub.png'
 import linkedin from '../assets/linkedinlogo.png'
 import facebook from '../assets/facebooklogo.svg'
 import instagram from '../assets/instagram.webp'
+import earth from '../assets/earth-icon.png'
+import openNav from '../extra/opennav'
 
 import '../css/ProjectsPage.css'
 
@@ -23,9 +25,34 @@ export default function ProjectsPage() {
                     <li class="list-item"><Link to="/contact">Contact</Link></li>
                   </ul>
                 </div>
+                <div id="side-menu">
+                    <i id="menu-icon" class="fa-solid fa-bars" onClick={openNav}></i>
+                </div>
             </header>
-            <main>
-                <h1>Projects</h1>
+            <main id='projects-main' class='h-auto'>
+                <h1 class="display-4">My Projects</h1>
+                <br></br>
+                <br></br>
+                <div id="projects-div" class="text-dark w-100 d-flex justify-content-between align-items-center">
+                    <div id="project-1-div" class="overflow-auto w-50 h-auto p-3 rounded shadow d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="text-center font-weight-bold">Gazetteer</h2>
+                        <br></br>
+                        <Link class="text-center w-75" to="https://gazetteerapp.oliverrpayne.co.uk/" target="_blank"><img src={earth} alt="Gazetteer App Image" class="w-25"></img></Link>
+                        <br></br>
+                        <p class="w-75 h-100 text-center"><b>Gazetteer</b> is a web app designed to work across mobile & desktop devices.
+                                                     The app allows users to choose any country in the world, to which specific data will be shown in the form of modals, as well as individual markers on the map.
+                                                     Examples of data included are: <b>Weather Forecast, Local News, Country Population, Capital City, Airports, Earthquakes etc. </b>
+                                                     Information shown on the UI is gathered through API requests using AJAX calls to PHP routines, utilising cURL to retrieve this information.
+                                                     Then the formatted JSON response data is used to display a variety of information to the user.</p>
+                    </div>
+                    <div id="project-2-div" class="w-50 h-auto p-3 rounded shadow d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="text-center font-weight-bold">Project 2 App</h2>
+                        <br></br>
+                        <img src={instagram} alt="" class="w-25"></img>
+                        <br></br>
+                        <p class="w-75 h-auto text-center overflow-auto">This is the description about the 2nd project.</p>
+                    </div>
+                </div>
             </main>
             <footer>
                 <div class="social-links">
