@@ -1,14 +1,14 @@
 const openNav = () => {
-    let navMenu = document.getElementsByClassName("list-container");
-    document.getElementById("menu-icon").className = "fa-solid fa-xmark"
+  let sideMenu = document.getElementById("menu-icon");
+  let navMenu = document.getElementsByClassName("list-container");
 
-    if (navMenu[0].style.display == 'none') {
-      navMenu[0].style.display = 'block';
-      document.getElementById("menu-icon").className = "fa-solid fa-xmark"
-    } else {
-      navMenu[0].style.display = 'none';
-      document.getElementById("menu-icon").className = "fa-solid fa-bars"
-    }
+  if (sideMenu.className == "fa-solid fa-bars") {
+    navMenu[0].style.display = 'block';
+    sideMenu.className = "fa-solid fa-xmark";
+  } else {
+    navMenu[0].style.display = 'none';
+    sideMenu.className = "fa-solid fa-bars";
   }
 
+}
 export default openNav;
