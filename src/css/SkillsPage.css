@@ -1,6 +1,6 @@
 #skillspage-main {
     position: relative;
-    top: 14vh;
+    top: 16vh;
     height: 70vh;
     width: 100%;
     display: flex;
@@ -62,9 +62,45 @@
 
 /*desktop and mobile*/
 
+@media only screen and (max-width: 1024px) {
+    #skillspage-main {
+        top: 20vh;
+        height: auto;
+    }
+
+    #languages-div {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    #frameworks-div {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .skill-image {
+        width: 50px;
+        height: auto;
+    }
+
+}
+
 @media only screen and (max-width: 904px) {
     #skillspage-main {
-        top: 22vh;
+        top: 26vh;
         height: auto;
     }
 
@@ -85,15 +121,38 @@
 
 @media only screen and (max-width: 425px) {
     #skillspage-main {
-        top: 50px;
+        top: 120px;
     }
 
     .skills-page-div h2 {
         font-size: 20px;
     }
 
+    #languages-div {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    #frameworks-div {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+
     .skill-image {
-        width: 30px;
+        width: 40px;
         height: auto;
     }
 

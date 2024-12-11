@@ -37,7 +37,9 @@ export default function HomePage() {
             <div class="about-me">
               <h2>Profile</h2><br/>
               <p>Hi! I am a full stack web developer from London, currently studying with IT Career Switch to help fulfil my goals of working full-time within the industry.</p>
-              <p>I thoroughly enjoy both the creative and problem-solving aspects to coding, applying my skills and knowledge to a variety of applications. Click through to the projects section to see the projects I have worked on!</p>
+              <p>I thoroughly enjoy both the creative and problem-solving aspects to coding, applying my skills and knowledge to a variety of applications. 
+                 Click through to the projects section to see the projects I have worked on!</p>
+              <p>For any enquiries, please feel free to contact me!</p>
             </div>
         </main>
         <footer>

@@ -13,3 +13,53 @@
 #projects-main h1 {
     text-decoration: underline;
 }
+
+#project-1-div img, #project-2-div img {
+    width: 150px;
+    height: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    #projects-main {
+        top: 16vh;
+        height: auto;
+    }
+
+    #projects-main h1 {
+        font-size: 35px;
+    }
+
+}
+
+@media only screen and (max-width: 904px) {
+    #projects-main {
+        top: 22vh;
+        height: auto;
+    }
+
+    #project-1-div img, #project-2-div img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #projects-main {
+        top: 12vh;
+        height: auto;
+    }
+
+    #projects-main h1 {
+        font-size: 30px;
+    }
+
+    #project-1-div p, #project-2-div p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    #project-1-div img, #project-2-div img {
+        width: 100px;
+        height: auto;
+    }
+}
