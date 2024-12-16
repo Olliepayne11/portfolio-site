@@ -22,12 +22,13 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     border-bottom: 5px solid #8697C4;
+    z-index: 1;
 }
 
 .logo {
     height: 100%;
     width: auto;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-right: 5px;
     display: flex;
     flex-direction: column;
@@ -62,21 +63,22 @@ header h1 a:hover, header h5 a:hover {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    width: 40%;
+    width: 50%;
 }
 
 header ul {
+    height: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    gap: 50px;
-    margin-right: 30px;
 }
 
 header ul li {
     list-style: none;
     font-family: 'DM Serif Text';
-    font-size: 25px;
+    font-size: 28px;
 }
 
 header ul li a {
@@ -95,6 +97,16 @@ header ul li a:hover {
 
 #side-menu {
     display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .list-container {
+        width: 60%;
+    }
+
+    header ul li {
+        font-size: 25px;
+    }
 }
 
 @media only screen and (max-width: 904px) {
@@ -117,6 +129,11 @@ header ul li a:hover {
         width: 100%;
         justify-content: center;
         align-items: center;
+        padding-right: 20px;
+    }
+
+    header ul {
+        justify-content: space-evenly;
     }
 
     header ul li {
@@ -132,15 +149,14 @@ header ul li a:hover {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        z-index: 1;
     }
 
     .logo {
         position: absolute;
         width: 100%;
         height: auto;
-        padding-left: 0px;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
     header h1 a {
@@ -165,6 +181,7 @@ header ul li a:hover {
         align-items: center;
         position: absolute;
         top: 7vh;
+        padding-right: 25px;
         width: 100%;
         height: 30px;
         background-color: #3d445a;
@@ -177,10 +194,7 @@ header ul li a:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 10px;
-        margin-top: 6px;
-        margin-left: -10px;
-        margin-right: 0px;
+        gap: 15px;
     }
 
     .list-container ul li {
@@ -206,6 +220,10 @@ header ul li a:hover {
 
     #menu-icon:active {
         color: #7091E6;
+    }
+
+    header ul li:hover {
+        margin-top: 0px;
     }
 }
 
@@ -402,7 +420,7 @@ footer img {
 
     .social-images {
         justify-content: center;
-        gap: 30px;
+        gap: 50px;
     }
 
     footer img {

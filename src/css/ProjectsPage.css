@@ -1,6 +1,6 @@
 #projects-main {
     position: relative;
-    top: 18vh;
+    top: 22vh;
     height: 70vh;
     width: 100%;
     display: flex;
@@ -12,6 +12,10 @@
 
 #projects-main h1 {
     text-decoration: underline;
+}
+
+#project-1-div, #project-2-div {
+    color: #3d445a;
 }
 
 #project-1-div img, #project-2-div img {
@@ -37,9 +41,8 @@
         height: auto;
     }
 
-    #project-1-div img, #project-2-div img {
-        width: 120px;
-        height: auto;
+    #project-1-div h2, #project-2-div h2 {
+        font-size: 25px;
     }
 }
 
@@ -50,7 +53,7 @@
     }
 
     #projects-main h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     #project-1-div p, #project-2-div p {
